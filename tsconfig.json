@@ -1,0 +1,43 @@
+{
+  "extends": "@tsconfig/node18/tsconfig.json",
+  "compilerOptions": {
+    /* mix of https://pkerschbaum.com/tidbits/sensible-tsconfig-defaults/ and https://gist.github.com/mtimbs/0eaf27df08cff8f4ca4303de60bf617b */
+    /* Type Checking */
+    "allowUnreachableCode": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    /* Modules */
+    "baseUrl": ".",
+    "paths": {
+      "@/core/*": ["packages/core/*"],
+    },
+    "moduleResolution": "node",
+    "types": [],
+    /* Emit */
+    "outDir": "./build",
+    "removeComments": true,
+    "sourceMap": true,
+    /* Interop Constraints */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    /* Language and Environment */
+    "lib": ["ES2017", "DOM"],
+    "target": "ES2017",
+    /* Projects */
+    "incremental": true,
+    /* Completeness */
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "**/node_modules"
+  ]
+}

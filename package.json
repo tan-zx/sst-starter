@@ -1,0 +1,44 @@
+{
+  "name": "sst-starter",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "sst dev",
+    "build": "sst build",
+    "deploy": "sst deploy",
+    "remove": "sst remove",
+    "console": "sst console",
+    "typecheck": "tsc --noEmit",
+    "precommit": "lint-staged"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.0",
+    "@types/aws-lambda": "^8.10.119",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "aws-cdk-lib": "2.91.0",
+    "constructs": "10.2.69",
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-standard-with-typescript": "^36.0.1",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "lint-staged": "^13.2.3",
+    "sst": "^2.24.8",
+    "typescript": "^5.1.6"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "aws-cdk": "^2.91.0",
+    "aws-lambda": "^1.0.7",
+    "wretch": "^2.6.0"
+  },
+  "lint-staged": {
+    "*.{js,ts}": "eslint --cache --fix"
+  }
+}

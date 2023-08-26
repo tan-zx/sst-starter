@@ -1,0 +1,13 @@
+{
+  "name": "@sst-starter/core",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "sst bind vitest",
+    "typecheck": "tsc -noEmit"
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
